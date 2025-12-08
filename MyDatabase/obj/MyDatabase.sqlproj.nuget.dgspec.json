@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/MyDatabase.sqlproj": {}
+  },
+  "projects": {
+    "/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/MyDatabase.sqlproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/MyDatabase.sqlproj",
+        "projectName": "MyDatabase",
+        "projectPath": "/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/MyDatabase.sqlproj",
+        "packagesPath": "/Users/majki/.nuget/packages/",
+        "outputPath": "/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/majki/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU5128"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
