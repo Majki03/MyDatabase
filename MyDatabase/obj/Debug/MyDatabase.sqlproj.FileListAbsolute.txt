@@ -1,5 +1,1 @@
 /Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/bin/Debug/MyDatabase.dacpac
-/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/obj/Debug/Model.xml
-/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/obj/Debug/refactor.xml
-/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/obj/Debug/postdeploy.sql
-/Users/majki/Developer/studia/licencjat/rok3/semestr5/zaawansowane_bazy_danych/MyDatabase/MyDatabase/obj/Debug/predeploy.sql
