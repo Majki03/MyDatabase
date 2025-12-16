@@ -4,7 +4,7 @@ CREATE TABLE [234182].[Customer] (
     [Title]        NVARCHAR (8)                                       NULL,
     [FirstName]    [dbo].[Name]                                       NOT NULL,
     [MiddleName]   [dbo].[Name]                                       NULL,
-    [LastName]     [dbo].[Name]                                       NOT NULL,
+    [LastName]     [Student_2].[M2_surname]                           NOT NULL,
     [Suffix]       NVARCHAR (10)                                      NULL,
     [CompanyName]  NVARCHAR (128)                                     NULL,
     [SalesPerson]  NVARCHAR (256)                                     NULL,
@@ -29,5 +29,10 @@ CREATE NONCLUSTERED INDEX [IX_Customer_EmailAddress]
     ON [234182].[Customer]([EmailAddress] ASC);
 
 
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_Customer_LastName]
+    ON [234182].[Customer]([LastName] ASC);
 GO
 
