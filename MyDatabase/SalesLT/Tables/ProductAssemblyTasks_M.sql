@@ -9,10 +9,10 @@ CREATE TABLE [SalesLT].[ProductAssemblyTasks_M] (
 GO
 
 ALTER TABLE [SalesLT].[ProductAssemblyTasks_M]
-    ADD CONSTRAINT [FK_Assembly_Parent] FOREIGN KEY ([ParentTaskID]) REFERENCES [SalesLT].[ProductAssemblyTasks_M] ([TaskID]);
+    ADD CONSTRAINT [FK_Assembly_Product] FOREIGN KEY ([ProductID]) REFERENCES [SalesLT].[Product] ([ProductID]);
 GO
 
 ALTER TABLE [SalesLT].[ProductAssemblyTasks_M]
-    ADD CONSTRAINT [FK_Assembly_Product] FOREIGN KEY ([ProductID]) REFERENCES [SalesLT].[Product] ([ProductID]);
+    ADD CONSTRAINT [FK_Assembly_Parent] FOREIGN KEY ([ParentTaskID]) REFERENCES [SalesLT].[ProductAssemblyTasks_M] ([TaskID]);
 GO
 
