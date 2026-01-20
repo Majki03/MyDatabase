@@ -31,3 +31,57 @@ CREATE TABLE [SalesLT].[Product] (
 
 GO
 
+
+
+CREATE   TRIGGER SalesLT.trg_Product_CheckPrice_M
+ON SalesLT.Product
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        INNER JOIN deleted d ON i.ProductID = d.ProductID
+        WHERE d.ListPrice > 0
+            AND (i.ListPrice - d.ListPrice) / d.ListPrice > 0.20
+    )
+    BEGIN
+        INSERT INTO SalesLT.ProductUpdateLog (ProductID, OldPrice, NewPrice, Message)
+        SELECT 
+            i.ProductID,
+            d.ListPrice,
+            i.ListPrice,
+            'Próba podniesienia ceny o więcej niż 20%'
+        FROM inserted i
+        INNER JOIN deleted d ON i.ProductID = d.ProductID
+        WHERE d.ListPrice > 0
+            AND (i.ListPrice - d.ListPrice) / d.ListPrice > 0.20;
+
+        RAISERROR ('Aktualizacja ceny przekracza dozwolony limit 20%%. Operacja anulowana.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END
+END
+GO
+
+
+
+CREATE   TRIGGER SalesLT.trg_Product_Update_M
+ON SalesLT.Product
+AFTER UPDATE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO SalesLT.ProductPriceHistory (ProductID, OldPrice, NewPrice)
+    SELECT 
+        i.ProductID,
+        d.ListPrice,
+        i.ListPrice
+    FROM inserted i
+    INNER JOIN deleted d ON i.ProductID = d.ProductID
+    WHERE i.ListPrice <> d.ListPrice;
+END;
+GO
+
